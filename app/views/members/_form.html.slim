@@ -1,0 +1,29 @@
+= render "shared/errors", obj: @member
+table.attr
+  tr
+    th = form.label :number
+    td = form.text_field :number, size: 8
+  tr
+    th = form.label :name
+    td = form.text_field :name
+  tr
+    th = form.label :full_name
+    td = form.text_field :full_name
+  tr
+    th = Member.human_attribute_name(:sex)
+    td 
+      = form.radio_button :sex, 1
+      = form.label :sex_1, "男"
+      = form.radio_button :sex, 2
+      = form.label :sex_2, "女"
+  tr
+    th = form.label :birthday, for: "member_birthday_1i"
+    td = form.date_select :birthday,
+          start_year: 1940, end_year: Time.current.year, use_month_numbers: true
+  tr
+    th = form.label :email
+    td = form.text_field :email
+  tr
+    th = Member.human_attribute_name(:administrator)
+    td = form.check_box :administrator
+       = form.label :administrator, "管理者"

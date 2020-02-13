@@ -67,3 +67,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'slim-rails'
 gem 'html2slim'
+gem "bootstrap"
+gem 'email_validator', '~> 1.6'
+gem 'rails-i18n', '~> 5.1'
